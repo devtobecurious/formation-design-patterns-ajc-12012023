@@ -15,8 +15,9 @@ namespace FondamentauxInterfaces
 
         public override void Naitre()
         {
-            base.Naitre();
             Console.WriteLine("Je fais ouiiin ");
+            base.Naitre();
+            base.Naitre();
         }
     }
 }
