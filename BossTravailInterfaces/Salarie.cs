@@ -8,6 +8,8 @@ namespace BossTravailInterfaces
 {
     internal class Salarie
     {
+        public event Action<FichierDeCode> TravailFini;
+
         private readonly ILogger loggerParDefaut;
 
         public Salarie(ILogger loggerParDefaut)
@@ -31,6 +33,10 @@ namespace BossTravailInterfaces
             // vraiLogger ??= logger;
 
             vraiLogger.Log("Moi je travaille bien voyons !");
+
+            //////////
+            ///
+            this.TravailFini?.Invoke(new FichierDeCode() { Content = "<html><head /> </html>" });
         }
     }
 }
